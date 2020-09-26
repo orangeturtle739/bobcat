@@ -38,14 +38,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1601142765,
+        "lastModified": 1601146884,
         "narHash": "sha256-hr5laKja20cIh4AjPdukBWXL01lqo4gqpcgi7JRyNRE=",
-        "type": "git",
-        "url": "file:/home/jacob/Documents/MyStuff/projects/qmk-compile-nix"
+        "owner": "orangeturtle739",
+        "repo": "qmk-compile-nix",
+        "rev": "fe309a835c9cf3c58eae1014cfea82c86c3190bc",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:/home/jacob/Documents/MyStuff/projects/qmk-compile-nix"
+        "owner": "orangeturtle739",
+        "repo": "qmk-compile-nix",
+        "type": "github"
       }
     },
     "root": {

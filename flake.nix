@@ -4,8 +4,8 @@
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-20.03";
   inputs.flake-utils.url = "github:numtide/flake-utils";
   inputs.qmk-compile-nix = {
-    url = "git+file:/home/jacob/Documents/MyStuff/projects/qmk-compile-nix";
-    # url = "github:orangeturtle739/qmk-compile-nix";
+    # url = "git+file:/home/jacob/Documents/MyStuff/projects/qmk-compile-nix";
+    url = "github:orangeturtle739/qmk-compile-nix";
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
