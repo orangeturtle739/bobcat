@@ -8,5 +8,5 @@
 
 #define PERMISSIVE_HOLD
 
-#define FIRMWARE_VERSION u8"gQZj4/zXDQj"
+#define FIRMWARE_VERSION u8"gQZj4/gnnWw"
 #define RGB_MATRIX_STARTUP_SPD 60

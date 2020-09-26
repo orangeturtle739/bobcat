@@ -1,0 +1,61 @@
+{
+  "nodes": {
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1600209923,
+        "narHash": "sha256-zoOWauTliFEjI++esk6Jzk7QO5EKpddWXQm9yQK24iM=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "3cd06d3c1df6879c9e41cb2c33113df10566c760",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1600952868,
+        "narHash": "sha256-U1HfLLrV7gs2u0hU1YjU4aDGbTC1uYtxyNu2TWXKXMY=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "5659cb448e9b615d642c5fe52779c2223e72f7eb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-20.03",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "qmk-compile-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1601142765,
+        "narHash": "sha256-hr5laKja20cIh4AjPdukBWXL01lqo4gqpcgi7JRyNRE=",
+        "type": "git",
+        "url": "file:/home/jacob/Documents/MyStuff/projects/qmk-compile-nix"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:/home/jacob/Documents/MyStuff/projects/qmk-compile-nix"
+      }
+    },
+    "root": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": "nixpkgs",
+        "qmk-compile-nix": "qmk-compile-nix"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
