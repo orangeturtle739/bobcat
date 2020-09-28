@@ -1,0 +1,11 @@
+#! /usr/bin/env bash
+
+mkdir foo
+cp -a $1 foo/
+cd foo/
+unzip *.zip
+cd *_source/
+cp * ../../
+cd ../../
+rm -rf foo
+echo '#define RGB_DISABLE_TIMEOUT (1000L*60)' >> config.h
