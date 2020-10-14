@@ -20,10 +20,20 @@
           sha256 = "tlWBOKS4JtOv+VJNp3+9s+kPjLzOO8NsVHCgN+ykYqA=";
           fetchSubmodules = true;
         };
-      in { defaultPackage = qmk-compile-nix.lib.mkKeyboardFirmware {
-        inherit qmk system;
-        keyboard = "ergodox_ez";
-        firmware = "${self}";
-        name = "bobcat";
-      }; });
+      in rec {
+        defaultPackage = qmk-compile-nix.lib.mkKeyboardFirmware {
+          inherit qmk system;
+          keyboard = "ergodox_ez";
+          firmware = "${self}";
+          name = "bobcat";
+        };
+        defaultApp = {
+          type = "app";
+          program = let
+            flasher = pkgs.writeScript "flash" ''
+              ${pkgs.wally-cli}/bin/wally ${defaultPackage}
+            '';
+          in "${flasher}";
+        };
+      });
 }
