@@ -9,3 +9,4 @@ cp * ../../
 cd ../../
 rm -rf foo
 echo '#define RGB_DISABLE_TIMEOUT (1000L*60)' >> config.h
+echo 'RGB_MATRIX_ENABLE = yes' >> rules.mk

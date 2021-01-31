@@ -16,7 +16,14 @@
 #include "keymap_danish.h"
 #include "keymap_norwegian.h"
 #include "keymap_portuguese.h"
-// #include "keymap_contributions.h"
+#include "keymap_contributions.h"
+#include "keymap_czech.h"
+#include "keymap_romanian.h"
+#include "keymap_russian.h"
+#include "keymap_uk.h"
+#include "keymap_estonian.h"
+#include "keymap_belgian.h"
+#include "keymap_us_international.h"
 
 #define KC_MAC_UNDO LGUI(KC_Z)
 #define KC_MAC_CUT LGUI(KC_X)
@@ -63,6 +70,7 @@ enum custom_keycodes {
   ST_MACRO_24,
   ST_MACRO_25,
 };
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_ergodox_pretty(
@@ -417,3 +425,4 @@ uint32_t layer_state_set_user(uint32_t state) {
   }
   return state;
 };
+

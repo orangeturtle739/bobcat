@@ -1,7 +1,8 @@
 {
   description = "Bobcat keyboard layout";
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-20.03";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-20.09";
+  inputs.nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
   inputs.flake-utils.url = "github:numtide/flake-utils";
   inputs.qmk-compile-nix = {
     # url = "git+file:/home/jacob/Documents/MyStuff/projects/qmk-compile-nix";
@@ -9,17 +10,19 @@
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, flake-utils, qmk-compile-nix }:
+  outputs = { self, nixpkgs, nixpkgs-unstable, flake-utils, qmk-compile-nix }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
         qmk = pkgs.fetchFromGitHub {
           owner = "zsa";
           repo = "qmk_firmware";
-          rev = "86fc93a8b47ca59a16850b7c2b68b220fb4776d0";
-          sha256 = "tlWBOKS4JtOv+VJNp3+9s+kPjLzOO8NsVHCgN+ykYqA=";
+          rev = "ec2a7452fcbe47078a20cb095fb8a77e26cdc6f5";
+          sha256 = "WGABahZ/i+vMNclYe7AXRmP5D7vEoDQdgPBRVK7KwF0=";
           fetchSubmodules = true;
         };
+        unstable-pkgs = nixpkgs-unstable.legacyPackages.${system};
+        wally = unstable-pkgs.wally-cli;
       in rec {
         defaultPackage = qmk-compile-nix.lib.mkKeyboardFirmware {
           inherit qmk system;
@@ -27,11 +30,12 @@
           firmware = "${self}";
           name = "bobcat";
         };
+        packages.wally-cli = wally;
         defaultApp = {
           type = "app";
           program = let
             flasher = pkgs.writeScript "flash" ''
-              ${pkgs.wally-cli}/bin/wally ${defaultPackage}
+              ${wally}/bin/wally-cli ${defaultPackage}
             '';
           in "${flasher}";
         };

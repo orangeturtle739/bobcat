@@ -2,11 +2,11 @@
   "nodes": {
     "flake-utils": {
       "locked": {
-        "lastModified": 1600209923,
-        "narHash": "sha256-zoOWauTliFEjI++esk6Jzk7QO5EKpddWXQm9yQK24iM=",
+        "lastModified": 1610051610,
+        "narHash": "sha256-U9rPz/usA1/Aohhk7Cmc2gBrEEKRzcW4nwPWMPwja4Y=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "3cd06d3c1df6879c9e41cb2c33113df10566c760",
+        "rev": "3982c9903e93927c2164caa727cd3f6a0e6d14cc",
         "type": "github"
       },
       "original": {
@@ -17,16 +17,32 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1600952868,
-        "narHash": "sha256-U1HfLLrV7gs2u0hU1YjU4aDGbTC1uYtxyNu2TWXKXMY=",
+        "lastModified": 1612060807,
+        "narHash": "sha256-ht+Dr/lo+8hjsxXbRZPjs8JrTNxaHxq94RKwZxUImUM=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "5659cb448e9b615d642c5fe52779c2223e72f7eb",
+        "rev": "f18fbc33930d7569cfedb8acd75177d0ff7c8678",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixos-20.03",
+        "ref": "nixos-20.09",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-unstable": {
+      "locked": {
+        "lastModified": 1611575689,
+        "narHash": "sha256-z2rNP3zdVnGxp9iV2Rbn0/LLKhk47DZQKxDkpYFLI7M=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "891f607d5301d6730cb1f9dcf3618bcb1ab7f10e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -38,11 +54,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1601146884,
-        "narHash": "sha256-hr5laKja20cIh4AjPdukBWXL01lqo4gqpcgi7JRyNRE=",
+        "lastModified": 1612129037,
+        "narHash": "sha256-teWTW5iUadmG9zIysg+D0Ll8lZgYjn7L0DfHzM/wnWA=",
         "owner": "orangeturtle739",
         "repo": "qmk-compile-nix",
-        "rev": "fe309a835c9cf3c58eae1014cfea82c86c3190bc",
+        "rev": "407e63444df5c25c32c3415b1ee8cc566f9da919",
         "type": "github"
       },
       "original": {
@@ -55,6 +71,7 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-unstable": "nixpkgs-unstable",
         "qmk-compile-nix": "qmk-compile-nix"
       }
     }
